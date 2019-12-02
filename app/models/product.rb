@@ -7,6 +7,7 @@ class Product < ApplicationRecord
     message: "URL must point to a jpg, png or gif image!"
   }
 
+  # вывод товара, который подвергался изменениям последним.
   def self.latest
     Product.order(:updated_at).last
   end
