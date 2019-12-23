@@ -15,9 +15,9 @@
     </div>
     <div id="colums">
       <div id="side">
-        <div id="cart">
-          <%= render(@cart) %>
-        </div>
+<!--        <div id="cart">-->
+          <%#= render(@cart) %>
+<!--        </div>-->
 
         <ul>
           <li><a href="/">Home</a></li>
@@ -26,6 +26,10 @@
           <li><a href="/contacts">Contacts</a></li>
           <li><a href="/products">Products</a></li>
         </ul>
+
+        <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
+          <%= render(@cart) %>
+        <% end %>
       </div>
       <div id="main">
         <%= yield %>
