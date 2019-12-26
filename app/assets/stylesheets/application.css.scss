@@ -41,7 +41,7 @@
   background: #141;
 
   #main {
-    background: url("./main.jpeg");
+    background: url(asset-path("main.jpeg"));
     margin-left: 20em;
     padding: 1em;
   }

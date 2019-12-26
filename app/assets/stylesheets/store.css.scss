@@ -9,7 +9,7 @@
 
   /* store directory entry */
   .entry {
-    background: url("./entry2.jpeg");
+    background: url(asset-path("entry2.jpeg"));
     overflow: auto;
     margin-top: 1em;
     border-bottom: 1px dotted #77d;
