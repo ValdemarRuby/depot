@@ -1,8 +1,8 @@
 class OrdersController < ApplicationController
   include CurrentCart
+  before_action :set_pay, only: [:new, :create]
   before_action :set_cart, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-
   # GET /orders
   # GET /orders.json
   def index
@@ -73,6 +73,9 @@ class OrdersController < ApplicationController
   end
 
   private
+    def set_pay
+      @payment_type = payment_types_names
+    end
     # Use callbacks to share common setup or constraints between actions.
     def set_order
       @order = Order.find(params[:id])
@@ -80,6 +83,15 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type)
+      params.require(:order).permit(:name, :address, :email, :pay_type_id)
+    end
+
+    def payment_types_names
+      payment_types = []
+      p = PayType.all
+      p.each do |pay_type|
+        payment_types << [pay_type.pay_name, pay_type.id]
+      end
+      payment_types
     end
 end

@@ -2,13 +2,14 @@
   h1 {
     margin: 0;
     padding-bottom: 0.5em;
-    font: 150% sans-serif;
-    color: #226;
-    border-bottom: 3px dotted #77d;
+    font: 200% sans-serif;
+    color: black;
+    border-bottom: 3px dotted #2E2F30;
   }
 
   /* store directory entry */
   .entry {
+    background: url("./entry2.jpeg");
     overflow: auto;
     margin-top: 1em;
     border-bottom: 1px dotted #77d;
