@@ -1,0 +1,22 @@
+<h2>Dear <%= @order.name %></h2>
+
+<h3>The administration of the Pragmatic Store store thanks you for the recent order.</h3>
+<p>You ordered the following item:</p>
+
+<table>
+  <% @order.line_items.each do |item| %>
+    <tr>
+      <td><%= item.quantity %>&times;</td>
+      <td><%= item.product.title %></td>
+      <td class="item_price"><%= number_to_currency(item.total_price) %></td>
+    </tr>
+  <% end %>
+  <tr class="total_line">
+    <td colspan="2">Total</td>
+    <td class="total_cell"><%= number_to_currency(@order.line_items.to_a.sum { |item| item.total_price }) %></td>
+  </tr>
+</table>
+
+<p>
+  When your item is shipped, we will send you a separate message by email.
+</p>

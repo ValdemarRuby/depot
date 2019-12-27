@@ -1,0 +1,10 @@
+OrderNotifier#received
+
+Dear <%= @order.name %>
+
+The administration of the Pragmatic Store store thanks you for the recent order.
+You ordered the following item:
+
+<%= render @order.line_items -%>
+
+When your item is shipped, we will send you a separate message by email.

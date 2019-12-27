@@ -45,6 +45,20 @@ Rails.application.configure do
   # Highlight code that triggered database queries in logs.
   config.active_record.verbose_query_logs = true
 
+  # Set mailer's default url
+  config.action_mailer.default_url_options = { :host => "localhost:3000" }
+
+  # Using Mailcatcher
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+      :address => "localhost",
+      :port => 1025,
+      :enable_starttls_auto => true,
+      :openssl_verify_mode  => 'none'
+  }
+
+  config.action_mailer.asset_host = 'http://localhost:3000'
+
   # Debug mode disables concatenation and preprocessing of assets.
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
