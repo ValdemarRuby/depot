@@ -30,4 +30,32 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+
+  layouts:
+    application:
+      title: "Pragmatic Bookshelf"
+      home: "Home"
+      questions: "Questions"
+      news: "News"
+      contact: "Contact"
+      product: "Products"
+  store:
+    index:
+      title_html: "Your Pragmatic Catalog"
+      add_html: "Add to Cart"
+
+
+es:
+
+  layouts:
+    application:
+      title: "Publicaciones de Pragmatic"
+      home: "Inicio"
+      questions: "Pregustas"
+      news: "Notiacias"
+      contact: "Contacto"
+      product: "Los productos"
+  store:
+    index:
+      title_html: "Su Cat&aacute;logo de Pragmatic"
+      add_html: "A&ntilde;adir al Carrito"

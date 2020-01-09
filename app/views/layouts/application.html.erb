@@ -11,7 +11,7 @@
   <body class="<%= controller.controller_name %>">
     <div id="banner">
       <%= image_tag("logo.png") %>
-      <%= @page_title || "Pragmatic Bookshelf" %>
+      <%= @page_title || t('.title') %>
       <% unless current_page?(login_url) %>
         <% if session[:user_id] %>
           <%= button_to 'Logout', logout_url, method: :delete %>
@@ -23,11 +23,11 @@
     <div id="colums">
       <div id="side">
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="http://www.../faq">Questions</a></li>
-          <li><a href="/products/new">News</a></li>
-          <li><a href="/contacts">Contacts</a></li>
-          <li><a href="/products">Products</a></li>
+          <li><a href="/"><%= t('.home') %></a></li>
+          <li><a href="http://www.../faq"><%= t('.questions') %></a></li>
+          <li><a href="/products/new"><%= t('.news') %></a></li>
+          <li><a href="/contacts"><%= t('.contact') %></a></li>
+          <li><a href="/products"><%= t('.product') %></a></li>
         </ul>
 
         <% if @cart %>

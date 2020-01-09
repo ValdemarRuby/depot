@@ -21,6 +21,10 @@ Rails.application.routes.draw do
   end
 
   resources :contacts
-
-  root to: 'store#index', as: 'store'
+  scope '(:locale)' do
+    resources :orders
+    resources :line_items
+    resources :carts
+    root to: 'store#index', as: 'store', via: :all
+  end
 end
