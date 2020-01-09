@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     user = User.find_by(name: params[:name])
     if user and user.authenticate(params[:password])
       session[:user_id] = user.id
-      redirect_to admin_url
+      redirect_to admin_url(locale: params[:set_locale])
     else
       redirect_to login_url, notice: 'Wrong username or password'
     end
