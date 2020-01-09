@@ -30,7 +30,6 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-
   layouts:
     application:
       title: "Pragmatic Bookshelf"
