@@ -16,7 +16,7 @@ es:
   store:
     index:
       title_html: "Su Cat&aacute;logo de Pragmatic"
-      add_html: "Anadir al Carrito"
+      add_cart: "Anadir al Carrito"
   number:
     currency:
       format:
@@ -25,7 +25,6 @@ es:
         separator: ","
         delimiter: "."
         format: "%u%n"
-#        format: "%n&nbsp;%u"
   order:
     new:
       legend: "Por favor, introduzca sus datos"
