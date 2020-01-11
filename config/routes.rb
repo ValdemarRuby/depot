@@ -6,11 +6,12 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  get 'admin/index'
+  #get 'admin/index'
+  #get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
   resources :users
-  resources :orders
-  resources :line_items
-  resources :carts
+
   #get 'store/index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   #resources :products do
@@ -18,11 +19,12 @@ Rails.application.routes.draw do
   #end
 
   resources :contacts
+  resources :products
+
   scope '(:locale)' do
     resources :orders
     resources :line_items
     resources :carts
-    resources :products
     root to: 'store#index', as: 'store', via: :all
   end
 end

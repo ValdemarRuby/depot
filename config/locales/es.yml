@@ -16,15 +16,15 @@ es:
   store:
     index:
       title_html: "Su Cat&aacute;logo de Pragmatic"
-      add_cart: "Anadir al Carrito"
+      add_html: "A&ntilde;adir al Carrito"
   number:
     currency:
       format:
-        unit: "$"
+        unit: "€"
         precision: 2
         separator: ","
         delimiter: "."
-        format: "%u%n"
+        format: "%n&nbsp;%u"
   order:
     new:
       legend: "Por favor, introduzca sus datos"
