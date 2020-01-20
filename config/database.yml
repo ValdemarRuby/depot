@@ -22,5 +22,5 @@ test:
 
 production:
   <<: *default
-#  database: db/development
-  database: project_production
+  database: db/development
+#  database: project_production

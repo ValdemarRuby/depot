@@ -1,7 +1,7 @@
 class OrdersController < ApplicationController
   skip_before_action :authorize, only: [:new, :create]
   include CurrentCart
-  before_action :set_pay, only: [:new, :create]
+  before_action :set_pay, only: [:new, :create, :edit]
   before_action :set_cart, only: [:new, :create]
   before_action :set_order, only: [:show, :edit, :update, :destroy]
   # GET /orders
@@ -13,6 +13,7 @@ class OrdersController < ApplicationController
   # GET /orders/1
   # GET /orders/1.json
   def show
+    @order_db = Order.find(params[:id]).attributes
   end
 
   # GET /orders/new
@@ -84,7 +85,7 @@ class OrdersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def order_params
-      params.require(:order).permit(:name, :address, :email, :pay_type_id, :ship_date => Time.now)
+      params.require(:order).permit(:name, :address, :email, :pay_type_id, :ship_date)
     end
 
     def payment_types_names

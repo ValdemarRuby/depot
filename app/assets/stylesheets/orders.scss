@@ -4,5 +4,35 @@
 
 
 .orders_index {
-    background: peru;
+	background-image: url(asset-path("admin_back.jpeg"));
+	td {
+	color: #000000
+	}	
 }
+
+.order_show {
+	background-image: url(asset-path("admin_back.jpeg"));
+}
+
+
+p {
+	color: #000000;
+}
+
+.table_order {
+	color: #000000;
+}
+
+tr {
+	color: #00000;
+}
+
+.total_cell {
+    font-weight: bold;
+    border-top: 2px solid #000000;
+}
+
+.total_line {
+	text-align: right;
+}
+

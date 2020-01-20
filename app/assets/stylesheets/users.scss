@@ -5,6 +5,9 @@
 
 .users {
   table {
-    background: peru;
+    background-image: url(asset-path("admin_back.jpeg"));
+    td {
+	color: #000000
+	}
   }
 }

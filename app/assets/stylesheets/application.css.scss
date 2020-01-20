@@ -14,12 +14,16 @@
  *= require_self
  */
 
+body {
+  background-image: url(asset-path("background.jpg"));
+}
+
 #banner {
-  background: no-repeat center center #999999;  //url(asset-path("banner1.png"));
+  background-image: url(asset-path("banner4.jpeg"));
   padding: 10px;
   border-bottom: 2px solid;
   font: small-caps 40px/40px "Times New Roman", serif;
-  color: #282;
+  color: #4f4f4f;
   text-align: center;
 
   img {
@@ -38,10 +42,11 @@
 }
 
 #colums {
-  background: #141;
+  background-image: url(asset-path("main.jpeg"));
+  //background: #141;
 
   #main {
-    background: url(asset-path("main.jpeg"));
+    //background-image: url(asset-path("main.jpeg"));
     margin-left: 20em;
     padding: 1em;
   }
@@ -50,8 +55,12 @@
     float: left;
     padding: 1em 2em;
     width: 13em;
-    background: #141;
+    background-image: url(asset-path("grey_coob.png"));
     padding-right: 5em;
+
+    .time {
+      background-image: url(asset-path("banner_left"));
+    }
 
     form, div {
       display: inline;
@@ -63,11 +72,11 @@
 
     #cart {
       font-size: smaller;
-      color: white;
+      color: #63c8ff;
 
       table {
-        border-top: 1px dotted #595;
-        border-bottom: 1px dotted #595;
+        border-top: 2px dotted #006ba6;
+        border-bottom: 2px dotted #006ba6;
         margin-bottom: 10px;
       }
     }
@@ -79,7 +88,7 @@
         list-style: none;
 
         a {
-          color: #bfb;
+          color: #f7c800;
           font-size: small;
         }
       }
@@ -89,9 +98,12 @@
 
 .depot_form {
   fieldset {
-    background: #efe;
+    .field {
+      color: #000000;
+    }
+    background-image: url(asset-path("admin_back.jpeg"));
     legend {
-      color: #dfd;
+      color: #000000;
       background: #141;
       font-family: sans-serif;
       padding: 0.2em 1em;

@@ -6,10 +6,13 @@
 <table class="orders_index">
   <thead>
     <tr>
+      <th>Id order</th>
       <th>Name</th>
       <th>Address</th>
       <th>Email</th>
       <th>Pay type</th>
+      <th>Date order</th>
+      <th>Sent?</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -17,10 +20,13 @@
   <tbody>
     <% @orders.each do |order| %>
       <tr>
+        <td><%= order.id %></td>
         <td><%= order.name %></td>
         <td><%= order.address %></td>
         <td><%= order.email %></td>
-        <td><%= order.pay_type %></td>
+        <td><%= order.pay_type.pay_name %></td>
+        <td><%= order.created_at %></td>
+        <td><%= order.ship_date? %></td>
         <td><%= link_to 'Show', order %></td>
         <td><%= link_to 'Edit', edit_order_path(order) %></td>
         <td><%= link_to 'Destroy', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
